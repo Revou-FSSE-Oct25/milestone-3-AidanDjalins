@@ -5,12 +5,9 @@ import ProductList from "@/components/products_list";
 import { Product } from "@/types/product";
 import Spinner from "@/components/spinner";
 import Image from "next/image";
-import Link from "next/link";
-import { useRouter } from "next/navigation";
 import axios from "axios";
 
 const Homepage = () => {
-  const router = useRouter();
   const [products, setProducts] = useState<Product[]>([]);
   const [isLoading, setIsLoading] = useState(true);
   const [errorMessage, setErrorMessage] = useState<string | null>(null);
@@ -24,7 +21,7 @@ const Homepage = () => {
         setProducts(data);
       } catch (error) {
         const message =
-          error instanceof Error ? error.message : "Something went wrong";
+          error instanceof Error ? error.message : "Products could not be fetched. Please try again";
         setErrorMessage(message);
       } finally {
         setIsLoading(false);
