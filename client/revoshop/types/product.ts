@@ -7,12 +7,12 @@ export type Product = {
   image: string;
 };
 
-export type ProductPlatzi = {
-    id: number;
-    title: string;
-    category: Category;
-    images: string[];
-};
+// export type ProductPlatzi = {
+//     id: number;
+//     title: string;
+//     category: Category;
+//     images: string[];
+// };
 
 export type Category = {
   id: number;
