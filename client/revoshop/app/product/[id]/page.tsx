@@ -12,7 +12,7 @@ type PageProps = {
 };
 
 async function fetchProduct(id: string) {
-  const res = await fetch(`https://fakestoreapi.com/products/${id}`, {
+  const res = await fetch(`https://api.escuelajs.co/api/v1/products/${id}`, {
     cache: "force-cache", 
     next: { revalidate: 60 }, 
   });

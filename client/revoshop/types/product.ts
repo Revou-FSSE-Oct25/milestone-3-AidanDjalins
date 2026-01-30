@@ -1,20 +1,16 @@
 export type Product = {
   id: number;
   title: string;
+  slug: string;
   price: number;
   description: string;
-  category: string;
-  image: string;
+  category: Category;
+  images: string[];
 };
-
-// export type ProductPlatzi = {
-//     id: number;
-//     title: string;
-//     category: Category;
-//     images: string[];
-// };
 
 export type Category = {
   id: number;
   name: string;
+  image: string;
+  slug: string;
 };

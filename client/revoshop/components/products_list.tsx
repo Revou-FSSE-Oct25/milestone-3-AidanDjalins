@@ -12,21 +12,10 @@ const ProductList = ({ products }: ProductListProps) => {
     const searchPrams = useSearchParams();
     const selectedCategory = searchPrams.get("category") || "all";
 
-    // Categorize products according to Fake Store API slug
-    const getCategorySlug = (productCategory: string): string => {
-        const categoryMap: Record<string, string> = {
-        "men's clothing": "clothes",      
-        "women's clothing": "clothes",    
-        "electronics": "electronics",     
-        "jewelery": "miscellaneous",      
-        };
-    
-        return categoryMap[productCategory.toLowerCase()] || "miscellaneous";
-    }
-
+    // Filter products by selected category
     const filteredProducts = selectedCategory === "all" 
         ? products 
-        : products.filter((product) => getCategorySlug(product.category) === selectedCategory);
+        : products.filter((product) => product.category.name.toLowerCase() === selectedCategory.toLowerCase());
 
   return (
     <div className="w-full">

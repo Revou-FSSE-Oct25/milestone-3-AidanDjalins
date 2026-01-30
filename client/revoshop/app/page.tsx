@@ -16,7 +16,7 @@ const Homepage = () => {
     async function loadProducts() {
       try {
         const { data } = await axios.get<Product[]>(
-          "https://fakestoreapi.com/products",
+          "https://api.escuelajs.co/api/v1/products",
         );
         setProducts(data);
       } catch (error) {
