@@ -1,7 +1,6 @@
 // app/product/[id]/page.tsx
 
 import { Product } from "@/types/product";
-import ProductCard from "@/components/product_card";
 import Image from "next/image";
 
 export const dynamic = "force-dynamic";
@@ -14,7 +13,7 @@ type PageProps = {
 
 async function fetchProduct(id: string) {
   const res = await fetch(`https://api.escuelajs.co/api/v1/products/${id}`, {
-    cache: "force-cache", 
+    cache: "no-store", 
     next: { revalidate: 60 }, 
   });
 
