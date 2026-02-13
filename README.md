@@ -13,6 +13,8 @@ This is a mockup project of a fake e-commerce store platform built on Next.js. P
 - Products can be filtered by category
 - Products, when clicked in list, navigates to dedicated product page with description and 'Add to Cart' button
 - Products fetched from Platzi Fake Store API
+- (!NEW) Added "Add to Cart" functionality which adds items to cart. Also added "Checkout Page"
+- (!NEW) Added Admin Panel where admins can view and perform CRUD operations on product data
 
 ### User Interface
 - Next.js Image component for optimized loading and performance\
@@ -29,3 +31,5 @@ This is a mockup project of a fake e-commerce store platform built on Next.js. P
 - **Next.js App Router**: Modern routing with layouts and nested routes
 - **TailwindCSS**: Majority of styling was done with tailwind
 - **Lucide Icons**: UI elements for logo, cart, notification bell, and others
+- **Zustand**: Cart state management
+

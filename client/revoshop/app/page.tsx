@@ -18,9 +18,7 @@ const Homepage = () => {
         const { data } = await axios.get<Product[]>(
           "https://api.escuelajs.co/api/v1/products",
         );
-        // Filter product amount shown by id
-        const filteredData = data.filter(product => product.id >= 1 && product.id <= 100);
-        setProducts(filteredData);
+        setProducts(data);
       } catch (error) {
         const message =
           error instanceof Error ? error.message : "Products could not be fetched. Please try again";
