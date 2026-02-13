@@ -1,12 +1,20 @@
 import { Product } from "@/types/product";
 import Image from "next/image";
 import { ShoppingCart } from "lucide-react";
+import useCartStore from "@/app/stores/cartStore";
 
 type ProductCardProps = {
   product: Product;
 };
 
 const ProductCard = ({ product }: ProductCardProps) => {
+  const { addToCart } = useCartStore();
+
+  const handleAddToCart = (e: React.MouseEvent) => {
+    e.preventDefault(); // Prevent Link navigation
+    addToCart(product, 1);
+  };
+
   return (
     <div className="bg-white shadow-lg rounded-lg overflow-hidden flex flex-col h-full">
       {/* PRODUCT IMAGE */}
@@ -35,6 +43,7 @@ const ProductCard = ({ product }: ProductCardProps) => {
         <div className="flex items-center justify-between mt-auto pt-4">
           <p className="font-bold text-xl">${product.price.toFixed(2)}</p>
           <button
+            onClick={handleAddToCart}
             className="bg-white ring-1 ring-gray-300 rounded-md px-4 py-2 text-sm font-medium cursor-pointer hover:bg-black hover:text-white transition-all duration-300 flex items-center gap-2"
           >
             <ShoppingCart className="w-4 h-4" />

@@ -14,3 +14,24 @@ export type Category = {
   image: string;
   slug: string;
 };
+
+
+export type CartItemType = Product & {
+  quantity: number;
+};
+
+export type CartItemsType = CartItemType[];
+
+// Zustand
+export type CartStoreStateType = {
+  cart: CartItemsType;
+  hasHydrated: boolean;
+};
+
+export type CartStoreActionsType = {
+  addToCart: (product: Product, quantity?: number) => void;
+  removeFromCart: (productId: number) => void;
+  updateQuantity: (productId: number, quantity: number) => void;
+  clearCart: () => void;
+  setHasHydrated: (state: boolean) => void;
+};
