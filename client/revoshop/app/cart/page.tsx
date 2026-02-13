@@ -2,7 +2,7 @@
 
 import { ArrowRight, Trash2 } from "lucide-react";
 import Image from "next/image";
-import { useRouter, useSearchParams } from "next/navigation";
+import { useRouter, useSearchParams } from "next/navigation";   
 import useCartStore from "../stores/cartStore";
 
 const steps = [
@@ -14,7 +14,7 @@ const steps = [
 
 const CartPage = () => {
     const searchParams = useSearchParams();
-    const router = useRouter();
+    // const router = useRouter();
     const { cart, removeFromCart } = useCartStore();
 
     const activeStep = parseInt(searchParams.get("step") || "1");
