@@ -33,3 +33,24 @@ This is a mockup project of a fake e-commerce store platform built on Next.js. P
 - **Lucide Icons**: UI elements for logo, cart, notification bell, and others
 - **Zustand**: Cart state management
 
+# Milestone 3 - Revision post-Iteration
+
+These are the newest changes/additions to the app following the meeting with TL
+
+## Main Features
+
+### Login and Authentication
+- Added Login Page to handle logging on between a user who is either a customer or admin
+- User types are exported from Platzi Fake Store's API
+- Redirect will occur if user inputs the correct credentials which will redirect the user to either home page or admin panel
+  
+### Test Files
+- Added test files to ensure components and logic fit requirements (functionality only, visual tests are in progress..)
+- Test files have been created for login page and product card
+
+### Technologies Implemented
+- **NextAuth**: Credentials and session provider, ensuring and handling of login process of users
+- **Jest & React Testing Library**: Creation and testing of test files
+
+
+
