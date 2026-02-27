@@ -48,3 +48,12 @@ export type User = {
   creationAt: string,
   updatedAt: string
 }
+
+// type for user session
+export type SessionUser = {
+  id: string;
+  email: string;
+  name: string;
+  role: "admin" | "customer";
+  image: string;
+};
