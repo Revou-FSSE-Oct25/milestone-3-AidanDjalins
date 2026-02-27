@@ -27,7 +27,7 @@ const LoginPage = () => {
             } else {
                 toast.success("Login succesful!");
 
-                // Check user role for apropriate redirection
+                // Check user role for appropriate redirection
                 const response = await fetch("/api/auth/session");
                 const session = await response.json();
 
